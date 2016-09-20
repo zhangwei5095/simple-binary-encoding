@@ -2,6 +2,10 @@
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
+    <module name="SuppressionFilter">
+        <property name="file" value="config/suppress.xml"/>
+    </module>
+
     <module name="SeverityMatchFilter">
         <property name="severity" value="info"/>
         <property name="acceptOnMatch" value="false"/>
@@ -14,6 +18,8 @@
     <module name="TreeWalker">
         <property name="tabWidth" value="4"/>
         <property name="severity" value="error"/>
+
+        <module name="Indentation"/>
 
         <module name="ConstantName"/>
 
@@ -48,7 +54,7 @@
 
         <module name="MethodLength">
             <property name="tokens" value="METHOD_DEF"/>
-            <property name="max" value="120"/>
+            <property name="max" value="130"/>
         </module>
 
         <module name="EmptyForInitializerPad"/>
